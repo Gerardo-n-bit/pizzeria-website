@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Da Jerry</title>
+    <link rel="stylesheet" href="Pizzeria.css">
+</head>
+
+<body>
+    <h1>Benvenuti alla Pizzeria Da Jerry</h1>
+
+    <div id="container-sezioni">
+        
+        <div class="sezione" id="sezione-pizza">
+            <h2>Ordina la tua Pizza</h2>
+
+            <label for="pizza">Menù:</label>
+            <select id="pizza">
+                <option value="">-- Seleziona --</option>
+                <option value="5">Marinara (€ 5)</option>
+                <option value="6">Margherita (€ 6)</option>
+                <option value="6">Wrustel e patatine (€ 6)</option>
+                <option value="8">Diavola (€ 8)</option>
+                <option value="10">Quattro stagioni (€ 10)</option>
+                <option value="10">Ortolana (€ 10)</option>
+                <option value="10">Norcina (€ 10)</option>
+                <option value="12">Montanara (€ 12)</option>
+                <option value="12">Caprese (€ 12)</option>
+                <option value="12">Nutella e cocco (€ 12)</option>
+            </select>
+
+            <label for="quantita">Quantità:</label>
+            <input type="number" id="quantita" min="1" max="10">
+
+            <button onclick="calcolaTotale()">Calcola Totale</button>
+            <p id="errore"></p>
+            <p id="totale"></p>
+            <button id="conferma" onclick="confermaOrdine()" style="display: none;">Conferma Ordine</button>
+            <button id="annulla" onclick="annullaOrdine()" style="display: none;">Annulla Ordine</button>
+            <p id="messaggio"></p>
+        </div>
+
+        
+        <div class="sezione" id="sezione-tavolo">
+            <h2>Prenota un tavolo</h2>
+
+            <p>Tavoli disponibili: <span id="tavoli"></span></p>
+
+            <label for="posti">Numero posti:</label>
+            <input type="number" id="posti" min="1" max="20">
+
+            <label for="cognome">Cognome:</label>
+            <input type="string" id="cognome">
+
+            <button onclick="confermaPrenotazione()">Conferma Prenotazione</button>
+
+            <p id="errore2"></p>
+            <p id="messaggioPrenotazione"></p>
+        </div>
+    </div>
+
+<script src="Pizzeria.js"></script> 
+</body>
+</html>

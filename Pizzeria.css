@@ -1,0 +1,179 @@
+/* RESET BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+/* SFONDO */
+body {
+    min-height: 100vh;
+    background-image: url("pizza-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* CONTENITORE SEZIONI */
+#container-sezioni {
+    display: flex;
+    flex-direction: row; /* affianca le due sezioni */
+    justify-content: center;
+    gap: 20px; /* spazio tra le sezioni */
+    flex-wrap: wrap; /* torna verticale su schermi piccoli */
+}
+
+/* SEZIONI */
+.sezione {
+    display: flex;
+    flex-direction: column; /* verticale */
+    align-items: center;    /* centrato */
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 20px 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: auto;
+    min-width: 250px;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* TITOLI */
+h1 {
+    color: #b22222; /* rosso/bruno per contrasto */
+    background-color: rgba(255, 255, 255, 0.9); /* rettangolo chiaro */
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #b22222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* LABEL */
+label {
+    font-weight: 600;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* INPUT E SELECT adattivi */
+input,
+select {
+    width: auto; /* adattivo al contenuto */
+    min-width: 200px; /* per leggibilità */
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* BOTTONI */
+button {
+    margin-top: 15px;
+    padding: 12px;
+    width: auto;
+    min-width: 150px;
+    background-color: #b22222;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: #8b1a1a;
+}
+
+/* BOTTONI SECONDARI */
+#annulla,
+#cancella {
+    background-color: #777;
+}
+
+#annulla:hover,
+#cancella:hover {
+    background-color: #555;
+}
+
+/* TESTI INFORMATIVI - totale, messaggi, errori */
+#totale,
+#errore,
+#errore2,
+#messaggio,
+#messaggioPrenotazione {
+    display: none; /* invisibili inizialmente */
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: inline-block; /* adattivi al contenuto */
+    max-width: 90%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* COLORI */
+#totale,
+#messaggio,
+#messaggioPrenotazione {
+    background-color: rgba(200, 230, 201, 0.8); /* verde chiaro */
+    color: #2e7d32;
+    font-weight: 600;
+}
+
+#errore,
+#errore2 {
+    background-color: rgba(255, 205, 210, 0.8); /* rosso chiaro */
+    color: #c62828;
+    font-weight: 600;
+}
+
+/* TAVOLI DISPONIBILI */
+#tavoli {
+    font-weight: bold;
+    color: #b22222;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    #container-sezioni {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .sezione {
+        padding: 15px 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    input,
+    select,
+    button {
+        min-width: 100%;
+    }
+}
